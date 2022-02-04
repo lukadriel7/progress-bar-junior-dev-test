@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        
+        <progress id="green-progress" class="progress-bar" data-color="green" value="50" max="100"></progress>
+        <progress class="progress-bar" data-color="red" value="50" max="100">50</progress>
+        <progress class="progress-bar" value="50" max="100">50</progress>
+        <progress class="progress-bar" data-color="blue" value="50" max="100">50</progress>
+        <progress class="progress-bar" data-color="yellow" value="50" max="100">50</progress>
+        <button onclick="finish()">Finish</button>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    const bars = document.getElementsByClassName('progress-bar');
+    function finish() {
+        for (let index = 0; index < bars.length; index++) {
+            bars.item(index).setAttribute('value', 100);
+        }
+    }
+</script>
